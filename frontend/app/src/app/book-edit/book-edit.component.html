@@ -1,0 +1,22 @@
+<h3>BOOK EDIT</h3>
+<form action="" method="post" (ngSubmit)="editBook()">
+
+
+<label for="book_title"  >
+  Title
+  <input type="text" id="book_title" name="book_title" [(ngModel)]="book.book_title" >
+</label>
+
+<label for="book_author">
+  Author
+  <input type="text" id="book_author" name="book_author" [(ngModel)]="book.book_author">
+</label>
+
+<label for="book_price">
+  Price
+  <input type="number"  id="book_price" name="book_price" [(ngModel)]="book.book_price">
+</label>
+
+<input type="submit" value="Edit Book">
+
+</form>

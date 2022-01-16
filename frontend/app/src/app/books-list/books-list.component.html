@@ -1,0 +1,24 @@
+
+
+<h3>BOOK LIST</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Book</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let book of bookList">
+      <td>{{book.book_title}}</td>
+      <td>{{book.book_author}}</td>
+      <td>{{book.book_price| currency}}</td>
+      <td><a routerLink = "../book-edit/{{book.id}}" >Editar</a></td>
+      <td><a style="cursor: pointer;" (click)="removeBook(book.id)">Excluir</a></td>
+    </tr>
+
+  </tbody>
+</table>
